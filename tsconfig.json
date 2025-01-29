@@ -21,6 +21,9 @@
 
     "baseUrl": "./src",
     "paths": {
+      "@shared/*": ["shared/*"],
+      "@types": ["shared/types"],
+      "@constants/*": ["shared/utils/constants/*"],
       "@components": ["shared/components/index"],
       "@pages/*": ["pages/*"],
       "@ui": ["shared/components/ui/index"]

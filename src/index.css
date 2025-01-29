@@ -1,68 +1,30 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  --font-display: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  --color-bg-brand: #f4511e;
+  --color-bg-pressed-primary: #e64a19;
+  --color-bg-hover-primary: #d84315;
+  --color-bg-brand-extralight: #ffab91;
+  --color-indicator-focused: #f4511e;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  --color-border-extralight: #e3e5e5;
+  --color-border-light: #ced2da;
+  --color-border-medium: #97a1af;
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  --color-text-invert: white;
+  --color-text-primary: #141c24;
+  --color-text-secondary: #344051;
+  --color-text-tertiary: #637083;
+  --color-text-quartenery: var(--color-border-medium);
+  --color-text-error: #f64c4c;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  --color-indicator-white: white;
+  --color-indicator-light: var(--color-border-light);
+  --color-indicator-medium: var(--color-border-medium);
+  --color-indicator-normal: var(--color-text-primary);
+  --color-indicator-error: var(--color-text-error);
+  --color-indicator-attention: #ffb219;
+  --color-indicator-positive: #40bf7f;
 }
