@@ -1,4 +1,4 @@
-import { ClassProps } from "@shared/types";
+import { ClassProps } from "@types";
 import clsx from "clsx";
 import { HTMLInputTypeAttribute } from "react";
 import { Controller, Control, RegisterOptions } from "react-hook-form";
