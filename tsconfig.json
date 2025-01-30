@@ -21,8 +21,8 @@
 
     "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["shared/*"],
-      "@types": ["shared/types"],
+      "@requests": ["shared/utils/requests/index"],
+      "@types": ["shared/utils/types/index"],
       "@constants/*": ["shared/utils/constants/*"],
       "@components": ["shared/components/index"],
       "@pages/*": ["pages/*"],
