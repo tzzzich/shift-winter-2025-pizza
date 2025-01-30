@@ -27,4 +27,20 @@
   --color-indicator-error: var(--color-text-error);
   --color-indicator-attention: #ffb219;
   --color-indicator-positive: #40bf7f;
+
+  --color-bg-disabled: #f3f4f6;
+}
+
+@layer components {
+  .btn {
+    @apply px-[32px] py-[16px] rounded-[16px] border-[1px] cursor-pointer font-medium transition duration-500 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-(--color-bg-brand) border-transparent text-white hover:bg-white hover:text-(--color-text-primary) hover:border-(--color-border-light);
+  }
+
+  .btn-secondary {
+    @apply border-(--color-border-light) text-(--color-text-primary) hover:bg-(--color-bg-brand) hover:text-white hover:border-transparent;
+  }
 }

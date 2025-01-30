@@ -1,4 +1,4 @@
-import { ColorSwatchItem } from "@components";
+import { ColorSwatchItem, TestForm } from "@components";
 import { Card } from "@ui";
 
 const colors = [
@@ -29,9 +29,9 @@ const colors = [
   },
 ];
 
-export default function ColorSwatchPage() {
+export default function TestPage() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 justify-center">
       <Card className="flex flex-wrap justify-around bg-neutral-50 gap-[24px]">
         {colors.map((color, index) => (
           <ColorSwatchItem
@@ -42,6 +42,7 @@ export default function ColorSwatchPage() {
           />
         ))}
       </Card>
+      <TestForm />
     </div>
   );
 }

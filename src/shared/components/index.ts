@@ -1,1 +1,1 @@
-export * from "./ColorSwatchItem";
+export * from "./test-page";

@@ -1,5 +1,5 @@
 interface ClassProps {
-  className: string;
+  className?: string;
 }
 
 export type { ClassProps };

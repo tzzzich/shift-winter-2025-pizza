@@ -1,6 +1,6 @@
 import { ROUTES } from "@constants/router";
 import "./App.css";
-import ColorSwatchPage from "@pages/ColorSwatch";
+import TestPage from "@pages/test";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "@pages/root";
 
@@ -12,7 +12,7 @@ function App() {
       children: [
         {
           path: ROUTES.ROOT,
-          element: <ColorSwatchPage />,
+          element: <TestPage />,
         },
       ],
     },
