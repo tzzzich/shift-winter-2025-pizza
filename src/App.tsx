@@ -1,14 +1,24 @@
-import { useState } from "react";
-import pizzaLogo from "/pizza.svg";
+import { ROUTES } from "@constants/router";
 import "./App.css";
+import TestPage from "@pages/test";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Root } from "@pages/root";
 
 function App() {
-  return (
-    <>
-      <img src={pizzaLogo} className="logo" alt="Pizza logo" />
-      <h2>Please stand by..</h2>
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: ROUTES.ROOT,
+      element: <Root />,
+      children: [
+        {
+          path: ROUTES.ROOT,
+          element: <TestPage />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
