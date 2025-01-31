@@ -3,13 +3,13 @@ import {
   OrderPayment,
   OrderResponse,
   OrdersResponse,
-  PizzaCatalog,
+  PizzaCatalogue,
   StatusResponse,
 } from "@types";
 import axios, { AxiosResponse } from "axios";
 import { api } from "./instance";
 
-const getPizzaCatalog = async (): Promise<AxiosResponse<PizzaCatalog>> =>
+const getPizzaCatalogue = async (): Promise<AxiosResponse<PizzaCatalogue>> =>
   await api.get("/pizza/catalog");
 
 const makeOrder = async (
@@ -30,4 +30,4 @@ const cancelOrder = async (
 ): Promise<AxiosResponse<StatusResponse>> =>
   await axios.put("pizza/orders/cancel", data);
 
-export { getPizzaCatalog, makeOrder, getOrders, getOrder, cancelOrder };
+export { getPizzaCatalogue, makeOrder, getOrders, getOrder, cancelOrder };

@@ -15,9 +15,6 @@ interface Dough {
   name: "THIN" | "THICK";
   price: number;
 }
-
-type Allergen = "молоко" | "пшеница" | "морепродукты" | "яйцо" | "соевые бобы";
-
 interface PizzaFullView {
   id: string;
   name: string;
@@ -31,7 +28,7 @@ interface PizzaFullView {
   totalFat: string;
   carbohydrates: string;
   sodium: string;
-  allergens: Allergen[];
+  allergens: string[];
   isVegetarian: boolean;
   isGlutenFree: boolean;
   isNew: boolean;
@@ -39,7 +36,7 @@ interface PizzaFullView {
   img: string;
 }
 
-interface PizzaCatalog extends StatusResponse {
+interface PizzaCatalogue extends StatusResponse {
   catalog: PizzaFullView[];
 }
 interface Order {
@@ -92,7 +89,8 @@ interface OrderPayment {
   debitCard: DebitCard;
 }
 export type {
-  PizzaCatalog,
+  PizzaCatalogue,
+  PizzaFullView,
   OrderResponse,
   OrdersResponse,
   OrderId,
