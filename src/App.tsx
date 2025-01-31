@@ -1,8 +1,9 @@
 import { ROUTES } from "@constants/router";
 import "./App.css";
-import TestPage from "@pages/test";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "@pages/root";
+import { QueryClient, QueryClientProvider } from "react-query";
+import MainPage from "@pages/main";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,13 +13,19 @@ function App() {
       children: [
         {
           path: ROUTES.ROOT,
-          element: <TestPage />,
+          element: <MainPage />,
         },
       ],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
